@@ -1,0 +1,76 @@
+#################LISTAS####################
+###########################################
+my_lista = ['Rojo', 'Azul', 'Amarillo', 'Naranja', 'Violeta', 'Verde']
+#input()
+print(my_lista)
+print(type(my_lista))          # Imprime el tipo de dato: <class 'list'> 👍
+print(my_lista[2])             # Accede al elemento en el índice 2 (Amarillo) 👍
+print("my_lista size: ", len(my_lista))  # len() retorna la cantidad de elementos de la lista 👍
+print(my_lista[0:2])           # Slicing: retorna elementos desde el índice 0 hasta el 1 (sin incluir el 2) 👍
+print(my_lista[:2])            # Slicing sin índice inicial: equivale a [0:2] 👍
+my_lista.append('Blanco')      # Agrega elemento al final de la lista
+print(my_lista)
+my_lista.insert(3, 'Negro')    # Inserta 'Negro' en el índice 3, desplazando los demás elementos 👍
+print(my_lista)
+my_lista.extend(['Marron', 'Gris'])   # Concatena otra lista al final de my_lista
+print(my_lista)
+print(my_lista.index('Azul'))  # Retorna el índice donde se encuentra 'Azul' en la lista 👍
+#my_lista.remove('Magenta')    # Esta línea está comentada porque 'Magenta' no existe y generaría un ValueError 👍
+my_lista.remove('Marron')      # Elimina la primera ocurrencia de 'Marron' en la lista 👍
+print(my_lista)
+my_lista.insert(8, 'Marron')   # Vuelve a insertar 'Marron' pero ahora en el índice 8 👍
+print(my_lista)
+print(my_lista.pop())          # Elimina y retorna el último elemento de la lista 👍
+size = len(my_lista)           # Guarda el tamaño actual de la lista después del pop() 👍
+print("size = ", size)
+#print(my_lista.pop(size))     # Comentado porque el índice 'size' estaría fuera de rango y generaría un IndexError 👍
+my_lista_3 = my_lista*3        # El operador * repite la lista 3 veces y la guarda en una nueva variable 👍
+print("my_lista_3: ", my_lista_3)
+print("Sort:")
+print()
+my_listaSort = my_lista.sort() # .sort() ordena la lista en su lugar y retorna None, por eso my_listaSort será None 👍
+print(my_listaSort)            # Imprime None porque .sort() no retorna la lista, la modifica directamente 👍
+my_NumList = [10, 9, 8, 7, 6 , 5 , 4, 3, 2, 1]
+print("Ordering my_NumList: ")
+my_NumList.sort()              # Ordena my_NumList de menor a mayor (ascendente) en su lugar 👍
+print(my_NumList)
+#OrderedLList = my_NumList.sort()  # Comentado por la misma razón: .sort() retorna None 👍
+#print(my_listaSort)
+# Ordenando lista de mayor a menor
+my_NumList.sort(reverse = True)    # El parámetro reverse=True invierte el orden a descendente 👍
+print("De menor a mayor: ", my_NumList)  # Nota: el mensaje debería decir "De mayor a menor" 👍
+
+#################TUPLAS####################
+###########################################
+# Corresponde a una estructura similar a las listas, la diferencia está
+# en que no se pueden modificar una vez creadas, es decir que son inmutables:
+# Convertir una lista a tupla:
+print("###########################")
+print("###########################")
+print("###########################")
+print("############TUPLAS#########")
+my_tupla = tuple(my_lista)     # Convierte my_lista en una tupla inmutable 👍
+print()
+print()
+print("my_tuple: ", my_tupla)
+print(my_tupla[0])             # Accede al primer elemento de la tupla por índice 👍
+print(my_tupla[2])             # Accede al tercer elemento de la tupla por índice 👍
+# Evaluar si un elemento está contenido en la tupla (Devuelve un valor booleano)
+print('Rojo' in my_tupla)      # El operador 'in' retorna True si 'Rojo' está en la tupla 👍
+print(my_tupla.count('Rojo'))  # .count() retorna cuántas veces aparece 'Rojo' en la tupla 👍
+# Tupla con un solo elemento
+my_tupla_unitaria = ('Blanco') # Advertencia: sin coma al final esto es un string, no una tupla 👍
+print(my_tupla_unitaria)
+# Empaquetado de tupla: se puede crear una tupla sin paréntesis separando valores con comas 👍
+my_tupla = 'Gaspar', 5, 8, 1999
+print(my_tupla)
+# Desempaquetado de tupla: los valores se asignan en orden a cada variable 👍
+nombre, dia, mes, año = my_tupla
+print(nombre)
+print(dia)
+print(mes)
+print(año)
+print("Nombre: ", nombre, " - Dia:", dia, " - Mes: ", mes, "- Año: ", año)
+# Convertir una tupla en una lista con list(), lo opuesto a tuple() 👍
+my_lista2=list(my_tupla)
+print(my_lista2)
